@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm trong chuỗi</title>
+</head>
+<body>
+<script>
+    function testAfterSubtract(k) {
+        let flag = false;
+        let b = '0123456789';
+        for (let i = 0; i < b.length; i++) {
+            if (k == b[i]) {
+                flag = true;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    let a = '';
+    a += prompt('Nhập chuỗi cần đếm số âm');
+    let count = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        if ((a[i] == "-") && (testAfterSubtract(a[i + 1]) == true)) {
+            count++;
+        }
+    }
+    alert('Có ' + count + ' số âm trong chuỗi bạn vừa nhập');
+</script>
+</body>
+</html>

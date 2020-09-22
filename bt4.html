@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng số nguyên</title>
+</head>
+<body>
+<p id="arrayBefore"></p>
+<button onclick="myReverse()">Đảo ngược lại</button>
+<p id="arrayAfter"></p>
+<script>
+    let n = +prompt('Nhập số phần tử của mảng');
+    parseInt(n);
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt('Nhập phần tử thứ ' + (i + 1));
+    }
+    document.getElementById("arrayBefore").innerHTML = a;
+
+    function myReverse() {
+        document.getElementById("arrayAfter").innerHTML = a.reverse();
+        ;
+    }
+
+
+</script>
+</body>
+</html>

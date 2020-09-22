@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Value</title>
+</head>
+<body>
+<h2 style="color: blueviolet">Dịch mảng </h2>
+<p>Mảng bạn vừa nhập như sau: </p>
+<p id="arrBefore"></p>
+<button onclick="myCheck()">Kiểm tra</button>
+<p id="arrAfter"></p>
+<script>
+    let n = +prompt('Nhập số phần tử của mảng');
+    parseInt(n);
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt('Nhập phần tử thứ ' + (i + 1));
+    }
+    document.getElementById("arrBefore").innerHTML = a;
+    let b = +prompt('Nhập số bạn muốn kiểm tra');
+
+    function myCheck() {
+        for (let i = 0; i < a.length; i++) {
+            if (b == a[i]) {
+                a[a.length] = null;
+                for (let j = i; j < a.length; j++) {
+                    a[j] = a[j+1];
+                }
+                break;
+            }
+        }
+            document.getElementById("arrAfter").innerHTML = a ;
+    }
+</script>
+</body>
+</html>

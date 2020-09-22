@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Value</title>
+</head>
+<body>
+<h2 style="color: blueviolet">Kiểm tra số có trong mảng không </h2>
+<p>Mảng bạn vừa nhập như sau: </p>
+<p id="arrBefore"></p>
+<button onclick="myCheck()">Kiểm tra</button>
+<p id="arrAfter"></p>
+<script>
+    let n = +prompt('Nhập số phần tử của mảng');
+    parseInt(n);
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt('Nhập phần tử thứ ' + (i + 1));
+    }
+    document.getElementById("arrBefore").innerHTML = a;
+    let b = +prompt('Nhập số bạn muốn kiểm tra');
+
+    function myCheck() {
+        let flag = -1;
+        for (let i = 0; i < a.length; i++) {
+            if (b == a[i]) {
+                flag = i;
+                break;
+            }
+        }
+        flag+=1;
+        if (flag !== 0) {
+            document.getElementById("arrAfter").innerHTML= "Your number is in the number " + flag + " of array";
+        } else document.getElementById("arrayAfter").innerHTML = "Your number is not in the array";
+        ;
+    }
+</script>
+</body>
+</html>
